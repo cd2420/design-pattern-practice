@@ -1,4 +1,4 @@
-package stratege;
+package strategy;
 
 public class Client implements Comparable<Client> {
 
