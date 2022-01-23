@@ -2,27 +2,32 @@ package bridge;
 
 import java.util.LinkedList;
 
-public class LinkedImpl<T> implements AbstractList<T>{
+public class LinkedImpl<T> implements AbstractList<T> {
 
-    LinkedList<T> list = new LinkedList<>();
+    LinkedList<T> linkedList;
 
-    @Override
-    public void addObject(T object) {
-        list.add(object);
+    public LinkedImpl() {
+        linkedList = new LinkedList<>();
+        System.out.println("Linked 로 구현합니다.");
     }
 
     @Override
-    public T getObject(int i) {
-        return list.get(i);
+    public void addElement(T object) {
+        linkedList.add(object);
     }
 
     @Override
-    public T removeObject(int i) {
-        return list.remove(i);
+    public T getElement(int i) {
+        return linkedList.get(i);
     }
 
     @Override
-    public int getSize() {
-        return list.size();
+    public T deleteElement(int i) {
+        return linkedList.remove(i);
+    }
+
+    @Override
+    public int getElementSize() {
+        return linkedList.size();
     }
 }

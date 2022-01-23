@@ -1,44 +1,47 @@
 package bridge;
 
 public class Test {
-
     public static void main(String[] args) {
-        Stack<String> arrayStack = new Stack<>(new ArrayImpl<>());
-        arrayStack.push("a");
-        arrayStack.push("b");
-        arrayStack.push("c");
+        Queue<String> arrayQueue = new Queue<String>(new ArrayImpl<String>());
+
+        arrayQueue.enQueue("aaa");
+        arrayQueue.enQueue("bbb");
+        arrayQueue.enQueue("ccc");
+
+        System.out.println(arrayQueue.deQueue());
+        System.out.println(arrayQueue.deQueue());
+        System.out.println(arrayQueue.deQueue());
+        System.out.println("=========================");
+
+        Queue<String> linkedQueue = new Queue<String>(new LinkedImpl<String>());
+        linkedQueue.enQueue("aaa");
+        linkedQueue.enQueue("bbb");
+        linkedQueue.enQueue("ccc");
+
+        System.out.println(linkedQueue.deQueue());
+        System.out.println(linkedQueue.deQueue());
+        System.out.println(linkedQueue.deQueue());
+        System.out.println("=========================");
+
+        Stack<String> arrayStack = new Stack<String>(new ArrayImpl<String>());
+        arrayStack.push("aaa");
+        arrayStack.push("bbb");
+        arrayStack.push("ccc");
+
         System.out.println(arrayStack.pop());
         System.out.println(arrayStack.pop());
         System.out.println(arrayStack.pop());
-        System.out.println("====================");
+        System.out.println("=========================");
 
-        Stack<String> linkedStack = new Stack<>(new LinkedImpl<>());
-        linkedStack.push("a");
-        linkedStack.push("b");
-        linkedStack.push("c");
+        Stack<String> linkedStack = new Stack<String>(new LinkedImpl<String>());
+        linkedStack.push("aaa");
+        linkedStack.push("bbb");
+        linkedStack.push("ccc");
+
         System.out.println(linkedStack.pop());
         System.out.println(linkedStack.pop());
         System.out.println(linkedStack.pop());
-        System.out.println("====================");
+        System.out.println("=========================");
 
-        Queue<String> arrayQueue = new Queue<>(new ArrayImpl<>());
-        arrayQueue.push("a");
-        arrayQueue.push("b");
-        arrayQueue.push("c");
-        System.out.println(arrayQueue.popLeft());
-        System.out.println(arrayQueue.popLeft());
-        System.out.println(arrayQueue.popLeft());
-        System.out.println("====================");
-
-        Queue<String> linkedQueue = new Queue<>(new LinkedImpl<>());
-        linkedQueue.push("a");
-        linkedQueue.push("b");
-        linkedQueue.push("c");
-        System.out.println(linkedQueue.popLeft());
-        System.out.println(linkedQueue.popLeft());
-        System.out.println(linkedQueue.popLeft());
-        System.out.println("====================");
     }
-
-
 }

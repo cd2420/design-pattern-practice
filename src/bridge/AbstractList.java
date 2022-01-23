@@ -1,11 +1,11 @@
 package bridge;
 
 public interface AbstractList<T> {
-    void addObject(T object);
+    void addElement(T object);
 
-    T getObject(int i);
+    T getElement(int i);
 
-    T removeObject(int i);
+    T deleteElement(int i);
 
-    int getSize();
+    int getElementSize();
 }

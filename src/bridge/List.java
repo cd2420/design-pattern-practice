@@ -4,24 +4,24 @@ public class List<T> {
 
     AbstractList<T> impl;
 
-    public List(AbstractList<T> impl) {
-        this.impl = impl;
+    public List(AbstractList<T> list) {
+        impl = list;
     }
 
     public void add(T object) {
-        impl.addObject(object);
+        impl.addElement(object);
     }
 
     public T get(int i) {
-        return impl.getObject(i);
+        return impl.getElement(i);
     }
 
     public T remove(int i) {
-        return impl.removeObject(i);
+        return impl.deleteElement(i);
     }
 
-    public int size() {
-        return impl.getSize();
+    public int getSize() {
+        return impl.getElementSize();
     }
 
 }

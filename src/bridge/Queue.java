@@ -2,17 +2,16 @@ package bridge;
 
 public class Queue<T> extends List<T>{
 
-
-    public Queue(AbstractList<T> impl) {
-        super(impl);
-        System.out.println("Queue가 구현되었습니다.");
+    public Queue(AbstractList list) {
+        super(list);
+        System.out.println("Queue를 구현합니다.");
     }
 
-    public void push(T obj) {
-        impl.addObject(obj);
+    public void enQueue(T obj) {
+        add(obj);
     }
 
-    public T popLeft() {
-        return impl.removeObject(0);
+    public T deQueue() {
+        return remove(0);
     }
 }
